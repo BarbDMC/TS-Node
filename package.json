@@ -1,0 +1,23 @@
+{
+  "name": "ts-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarbDMC/TS-Node.git"
+  },
+  "author": "BarbDMC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarbDMC/TS-Node/issues"
+  },
+  "homepage": "https://github.com/BarbDMC/TS-Node#readme",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
+}
