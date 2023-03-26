@@ -19,5 +19,8 @@
   "homepage": "https://github.com/BarbDMC/TS-Node#readme",
   "devDependencies": {
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "mongoose": "^7.0.3"
   }
 }
