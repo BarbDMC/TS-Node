@@ -1,9 +1,11 @@
-const {Request, Response} = require('express');
-const res = require('express/lib/response');
-const usersModel = require('../models/usersModel.ts');
+import {Request, Response} from 'express';
+import usersModel from '../models/usersModel';
+import {validateIdCard} from '../services/usersService';
 
-const createUser = async (req: Request, res: Response) => {
+export const createUser = async (req: Request, res: Response) => {
   try {
+    await validateIdCard(req.body.idCard);
+
     await usersModel.create({
         idCard: req.body.idCard,
         firstName: req.body.firstName,
@@ -16,5 +18,3 @@ const createUser = async (req: Request, res: Response) => {
     res.send(error);
   }
 };
-
-module.exports = createUser;
