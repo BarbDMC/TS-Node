@@ -1,5 +1,5 @@
-import mongoose, { Schema, Document } from 'mongoose';
-
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 interface IUser {
   idCard: string;
   firstName: string;
@@ -9,7 +9,7 @@ interface IUser {
   email: string;
 }
 
-const UserSchema: Schema = new Schema({
+const UserSchema: IUser = new Schema({
   idCard: { type: String, required: true, unique: true },
   firstName: { type: String, required: true },
   middleName: { type: String},
@@ -18,4 +18,4 @@ const UserSchema: Schema = new Schema({
   email: { type: String, required: true, unique: true },
 });
 
-export default mongoose.model<IUser>('User', UserSchema);
+export default mongoose.model('User', UserSchema);
