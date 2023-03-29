@@ -1,5 +1,5 @@
-import express, {Request, Response} from 'express';
-import {routerApi} from './routes/routerApi';
+import express, { Request, Response } from 'express';
+import { routerApi } from './src/routes/routerApi';
 
 const app = express();
 
