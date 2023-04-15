@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
-import {createUser} from '../controllers/usersController';
+import { createUser, updateUser } from '../controllers/usersController';
 
-router.post('/create', createUser);
+router.post('', createUser);
+router.patch('', updateUser);
+router.get('', createUser);
+router.delete('', createUser);
 
 module.exports = router;
